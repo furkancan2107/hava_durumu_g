@@ -12,7 +12,7 @@ class UserService {
 
   Future getTahmin(String sehir) async {
     /* String url =
-        "http://api.weatherapi.com/v1/forecast.json?key=4ee03e6401d14844abd225853231502&q=${sehir}&days=10&aqi=no&alerts=no";
+        "http://api.weatherapi.com/v1/forecast.json?key=***=${sehir}&days=10&aqi=no&alerts=no";
     */
     var response = await http.get(Uri.parse(_api.hangiSehir(sehir)));
     if (response.body.isNotEmpty) {
@@ -24,7 +24,7 @@ class UserService {
 
   Future getSpor() async {
     String url =
-        "http://api.weatherapi.com/v1/sports.json?key=4ee03e6401d14844abd225853231502&q=Turkey&days=10&aqi=no&alerts=no";
+        "http://api.weatherapi.com/v1/sports.json?key=****=Turkey&days=10&aqi=no&alerts=no";
     var response = await http.get(Uri.parse(url));
     if (response.statusCode == 200) {
       var jsonBody = Spor.fromJson(jsonDecode(response.body));
@@ -36,7 +36,7 @@ class UserService {
 
 class Api {
   String url =
-      "http://api.weatherapi.com/v1/forecast.json?key=4ee03e6401d14844abd225853231502&q=";
+      "http://api.weatherapi.com/v1/forecast.json?key=***=";
   int days = 10;
   dynamic hangiSehir(String city) {
     return "${url}${city}&days=20&aqi=no&alerts=no}";

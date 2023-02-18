@@ -2,11 +2,10 @@
 
 import 'dart:convert';
 
-import 'package:flutter/cupertino.dart';
+import 'package:hava_durumu/model/sporModel.dart';
 
 import '../model/models.dart';
 import 'package:http/http.dart' as http;
-import 'package:location/location.dart';
 
 class UserService {
   Api _api = Api();
@@ -22,6 +21,17 @@ class UserService {
     }
     return null;
   }
+
+  Future getSpor() async {
+    String url =
+        "http://api.weatherapi.com/v1/sports.json?key=4ee03e6401d14844abd225853231502&q=Turkey&days=10&aqi=no&alerts=no";
+    var response = await http.get(Uri.parse(url));
+    if (response.statusCode == 200) {
+      var jsonBody = Spor.fromJson(jsonDecode(response.body));
+      return jsonBody;
+    }
+    return;
+  }
 }
 
 class Api {
@@ -29,6 +39,6 @@ class Api {
       "http://api.weatherapi.com/v1/forecast.json?key=4ee03e6401d14844abd225853231502&q=";
   int days = 10;
   dynamic hangiSehir(String city) {
-    return "${url}${city}&days=10&aqi=no&alerts=no}";
+    return "${url}${city}&days=20&aqi=no&alerts=no}";
   }
 }

@@ -4,6 +4,7 @@ import 'package:location/location.dart';
 import "package:google_fonts/google_fonts.dart";
 
 import '../model/models.dart';
+import '../model/sporModel.dart';
 import '../service/service.dart';
 
 class Sabitler {
@@ -20,6 +21,7 @@ class Sabitler {
   static LocationData? locationData;
   static double? enlem;
   static double? boylam;
+  static Spor? data;
 
   static var saat;
   static int? saat1;
@@ -43,6 +45,13 @@ class Sabitler {
     return BoxDecoration(
       image: DecorationImage(
           image: AssetImage("assets/homepage.jpg"), fit: BoxFit.cover),
+    );
+  }
+
+  static BoxDecoration getSporPageDecoration() {
+    return BoxDecoration(
+      image: DecorationImage(
+          image: AssetImage("assets/sporA.jpg"), fit: BoxFit.cover),
     );
   }
 

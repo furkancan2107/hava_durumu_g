@@ -7,7 +7,7 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:hava_durumu/constant/Sabitler.dart';
 import 'package:hava_durumu/model/models.dart';
-import 'package:hava_durumu/search_page.dart';
+import 'package:hava_durumu/pages/search_page.dart';
 
 import 'package:hava_durumu/service/service.dart';
 import 'package:get/get.dart';
@@ -16,7 +16,8 @@ import 'package:http/http.dart' as http;
 
 import 'package:location/location.dart';
 
-import 'home_page.dart';
+import 'pages/home_page.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 void main() => runApp(MyApp());
 
@@ -64,8 +65,12 @@ class _MyAppState extends State<MyApp> {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-        title: 'Material App',
-        home: home != null ? home : Center(child: Sabitler.getCircular()));
+    return ScreenUtilInit(
+      designSize: Size(412, 732),
+      builder: (context, child) => MaterialApp(
+          debugShowCheckedModeBanner: false,
+          title: 'Material App',
+          home: home != null ? home : Center(child: Sabitler.getCircular())),
+    );
   }
 }

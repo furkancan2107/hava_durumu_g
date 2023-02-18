@@ -1,17 +1,19 @@
-# hava_durumu_g
+# Hava Durumu
 
-A new Flutter project.
+# Özellikler
+ *  Anlık Konum
+ *  Şehir Seçimi
+ *  İlçe Seçimi
+ *  Saat saat hava bilgisi
+ *  gün içinde oynanacak futbol maçları
+ *  10 günlük veri 
 
-## Getting Started
+# Ana Ekran
+![resim1](https://github.com/furkancan2107/hava_durumu_g/blob/master/assets/home%20screenshot.png?raw=true)
+# Arama Ekranı
+![resim2](https://github.com/furkancan2107/hava_durumu_g/blob/master/assets/arama%20screen.png?raw=true)
+# Bilgi Ekranı
+![resim2](https://github.com/furkancan2107/hava_durumu_g/blob/master/assets/bilgi%20screen.png?raw=true)
+# Spor Ekranı
+![resim2](https://github.com/furkancan2107/hava_durumu_g/blob/master/assets/spor%20screen%20%20.png?raw=true)
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-"# havaDurumu-web" 
